@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="appedo" default="copy" basedir=".">
+<project name="appedo" default="compile" basedir=".">
 
 
 
