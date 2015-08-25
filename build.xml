@@ -23,7 +23,7 @@
 <target name="compile" depends="copy">
 
 
-<javac srcdir="/root/.jenkins/jobs/appedo/workspace/src" destdir="/root/.jenkins/jobs/appedo/workspace/bin" includes="/*.java"></javac>
+<javac srcdir="/root/.jenkins/jobs/appedo/workspace/src/helo.java" destdir="/root/.jenkins/jobs/appedo/workspace/bin" ></javac>
 </target>
 
 
