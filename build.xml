@@ -20,7 +20,11 @@
 <target name="copy" depends="init">
 <copy file="/root/.jenkins/jobs/appedo/workspace/helloworld.java" tofile="/root/.jenkins/jobs/appedo/workspace/src/helo.java"/>
 </target>
+<target name="compile" depends="copy">
 
+
+<javac srcdir="root/.jenkins/jobs/appedo/workspace/src" destdir="root/.jenkins/jobs/appedo/workspace/bin" includes="**/*.java"></javac>
+</target>
 
 
 
