@@ -4,7 +4,8 @@
 
 
 
-<target name="bin">
+<target name="delete">
+ <delete dir="bin"/>
 <delete dir="src"/>
 <delete dir="lib"/>
 <delete dir="test"/>
