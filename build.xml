@@ -17,7 +17,7 @@
 <mkdir dir="test"/>
 </target>
 <target name="copy" depends="init">
-<copy file="/root/.jenkins/jobs/appedo/workspace/helloworld.java" tofile="root/.jenkins/jobs/appedo/workspace/src"/>
+<copy file="/root/.jenkins/jobs/appedo/workspace/helloworld.java" tofile="/root/.jenkins/jobs/appedo/workspace/src"/>
 </target>
 
 
