@@ -4,10 +4,10 @@
 
 
 
-<target name="delete">
+<target name="bin">
 <delete dir="src"/>
-<delete dir="WebContent"/>
-<delete dir="build"/>
+<delete dir="lib"/>
+<delete dir="test"/>
 </target>
  
 <target name="init" depends="delete">
