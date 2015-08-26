@@ -13,7 +13,7 @@
  
 <target name="init" depends="delete">
 <mkdir dir="bin"/>
-<mkdir dir="war"/>
+<mkdir dir="wars"/>
 
 </target>
 
@@ -24,7 +24,7 @@
 </target>
 <target name="package" depends="compile">
 
-<war destfile="war/helloworld.war" webxml="">
+<war destfile="wars/helloworld.war" webxml="">
         
         <classes dir="bin"/>
     </war>
