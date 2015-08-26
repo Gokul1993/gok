@@ -1,31 +1,39 @@
 <?xml version="1.0"?>
 
-<project name="appedo" default="compile" basedir=".">
+<project name="appedo" default="package" basedir=".">
 
 
 
 <target name="delete">
  <delete dir="bin"/>
-<delete dir="src"/>
 <delete dir="lib"/>
 <delete dir="test"/>
+<delete dir="wars"/>
 </target>
  
 <target name="init" depends="delete">
 <mkdir dir="bin"/>
-<mkdir dir="src"/>
-<mkdir dir="lib"/>
-<mkdir dir="test"/>
+<mkdir dir="wars"/>
+
 </target>
-<target name="copy" depends="init">
-<copy file="/root/.jenkins/jobs/appedo/workspace/helloworld.java" tofile="/root/.jenkins/jobs/appedo/workspace/src/helo.java"/>
-</target>
-<target name="compile" depends="copy">
+
+<target name="compile" depends="init">
 
 
-<javac srcdir="/root/.jenkins/jobs/appedo/workspace/src/helo.java" destdir="/root/.jenkins/jobs/appedo/workspace/bin/"></javac>
+<javac includeantruntime="true" debug="true" srcdir="src" destdir="bin"></javac>
+</target>
+<target name="package" depends="compile">
+
+<war destfile="wars/helloworld.war" webxml="">
+        
+        <classes dir="bin"/>
+    </war>
 </target>
 
 
 
 </project>
+
+
+
+
